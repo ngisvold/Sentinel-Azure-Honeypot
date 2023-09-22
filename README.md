@@ -14,3 +14,6 @@ The script is used in this project where I setup Azure Sentinel (SIEM) and conne
 
 <h2>API</h2>
 - IP Address to Geolocation API - https://ipgeolocation.io 
+
+<h4>Thanks</h4>
+Thank you Josh Madakor on YouTube for inspiring this project.
