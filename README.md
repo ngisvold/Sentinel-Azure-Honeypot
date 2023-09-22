@@ -123,6 +123,3 @@ FAILED_RDP_WITH_GEO_CL
 <p align="center">
 <img src="https://nathangisvold.com/static/img/siem/AttackMap.png" height="80%" width="80%" alt="Firewall *"/>
 </p>
-
-<h4>Project Credits</h4>
-Thank you <a href='https://www.youtube.com/watch?v=RoZeVbbZ0o0'>Josh Madakor on YouTube</a> for inspiring this project.
