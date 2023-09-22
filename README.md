@@ -41,6 +41,12 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 <img src="https://nathangisvold.com/static/img/siem/3_Data-Collection.png" height="80%" width="80%" alt="All Events"/>
 </p>
 
+- Connect the Data Log to the Workspace.
+
+<p align="center">
+<img src="https://nathangisvold.com/static/img/siem/4_Connect-Data_log.png" height="80%" width="80%" alt="All Events"/>
+</p>
+
 <h3>Integrating Azure Sentinel:</h3>
 
 1. Add Azure Sentinel to the Workspace:
