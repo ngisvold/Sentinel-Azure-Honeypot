@@ -125,4 +125,4 @@ FAILED_RDP_WITH_GEO_CL
 </p>
 
 <h4>Project Credits</h4>
-Thank you Josh Madakor on YouTube for inspiring this project.
+Thank you <a href='https://www.youtube.com/watch?v=RoZeVbbZ0o0'>Josh Madakor on YouTube</a> for inspiring this project.
