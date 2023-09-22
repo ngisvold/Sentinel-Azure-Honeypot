@@ -7,8 +7,8 @@ The Powershell script in this repository is responsible for parsing out Windows 
 The script is used in this project where I setup Azure Sentinel (SIEM) and connect it to a live virtual machine acting as a honey pot. We will observe live attacks (RDP Brute Force) from all around the world. I will use a custom PowerShell script to look up the attackers Geolocation information and plot it on an Azure Sentinel Map!
 
 
-#Languages
+<h2>Languages</h2>
 - PowerShell: Extract RDP failed logon logs from Windows Event Viewer
 
-#API
+<h2>API</h2>
 - [ipgeolocation.io](https://ipgeolocation.io): IP Address to Geolocation API
