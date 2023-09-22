@@ -1,5 +1,9 @@
 # Azure Sentinel Honeypot Monitoring Project
 
+<p align="center">
+<img src="https://nathangisvold.com/static/img/siem/AttackMap.png" height="80%" width="80%" alt="Firewall *"/>
+</p>
+
 <h2>🛡️Project Summary</h2>
 
 Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, capturing live RDP Brute Force attack data from global sources. This project leverages a custom PowerShell script to fetch the geo-location of attackers and dynamically plots them on the Azure Sentinel Map for real-time threat visualization.
@@ -14,7 +18,7 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 - Disabling the Windows VM Defender Firewall.
 
 <p align="center">
-<img src="https://nathangisvold.com/static/img/siem/AttackMap.png" height="85%" width="85%" alt="Firewall *"/>
+<img src="https://nathangisvold.com/static/img/siem/firewall.webp" height="85%" width="85%" alt="Firewall *"/>
 </p>
   
 *Warning: This atypical setup is intentionally designed to test the capabilities of Azure Sentinel SIEM and should not be replicated for production or sensitive environments.
