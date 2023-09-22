@@ -58,7 +58,7 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 <img src="https://nathangisvold.com/static/img/siem/5_Create-Sentinel.png" height="80%" width="80%" alt="All Events"/>
 </p>
 
-<h3>Simulating RDP Attack & Gathering Location Data:</h3>h3>
+<h3>Simulating RDP Attack & Gathering Location Data:</h3>
 
 1. Simulate a Failed RDP Logon:
 
@@ -71,7 +71,6 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
  -  <a href='https://github.com/ngisvold/Sentinel-Azure-RDP-Attack/blob/main/Security_Log_Exporter.ps1'>Security_Log_Exporter.ps1</a>
  
 -  Additionally, the script interfaces with a third-party API to retrieve geographical information pertaining to the attacker's location.
-
 
 3. API Key Acquisition & Configuration:
 
