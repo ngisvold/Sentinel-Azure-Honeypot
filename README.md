@@ -75,10 +75,10 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 3. API Key Acquisition & Configuration:
 
 - Obtain an API key for the IP address-to-geolocation service from IPGeolocation.
-  - IP Address to Geolocation API - https://ipgeolocation.io 
+- IP Address to Geolocation API - https://ipgeolocation.io 
 - Configure the PowerShell script with the obtained API key, which allows Azure Sentinel to visualize the source locations of the attacks.
-
-4.Execute the PowerShell Script:
+  
+4. Execute the PowerShell Script:
 
 - Run the Security_Log_Exporter.ps1 script.
 - After execution, a log file will be generated and stored at C:\ProgramData
