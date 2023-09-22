@@ -58,16 +58,38 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 <img src="https://nathangisvold.com/static/img/siem/5_Create-Sentinel.png" height="80%" width="80%" alt="All Events"/>
 </p>
 
-<h2>Powershell for VM</h2>
+<h3>Simulating RDP Attack & Gathering Location Data:</h3>h3>
 
-The Powershell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third party API to collect geographic information about the attackers location.
+1. Simulate a Failed RDP Logon:
 
-The script is used in this project where I setup Azure Sentinel (SIEM) and connect it to a live virtual machine acting as a honey pot. We will observe live attacks (RDP Brute Force) from all around the world. I will use a custom PowerShell script to look up the attackers Geolocation information and plot it on an Azure Sentinel Map!
+- Log into the configured VM.
+- Intentionally use an incorrect password for login. This will generate a failed RDP logon event that will appear in the Windows Event Viewer's Security Logs.
 
-- PowerShell: Extract RDP failed logon logs from Windows Event Viewer - <a href='https://github.com/ngisvold/Sentinel-Azure-RDP-Attack/blob/main/Security_Log_Exporter.ps1'>Security_Log_Exporter.ps1</a>
+2. Install and Configure the PowerShell Script:
 
-<h2>API</h2>
-- IP Address to Geolocation API - https://ipgeolocation.io 
+- Download and use the provided PowerShell script from this repository. This script is designed to extract information from the Windows Event Log related to failed RDP attacks.
+ -  <a href='https://github.com/ngisvold/Sentinel-Azure-RDP-Attack/blob/main/Security_Log_Exporter.ps1'>Security_Log_Exporter.ps1</a>
+ 
+-  Additionally, the script interfaces with a third-party API to retrieve geographical information pertaining to the attacker's location.
+
+
+3. API Key Acquisition & Configuration:
+
+- Obtain an API key for the IP address-to-geolocation service from IPGeolocation.
+  - IP Address to Geolocation API - https://ipgeolocation.io 
+-Configure the PowerShell script with the obtained API key, which allows Azure Sentinel to visualize the source locations of the attacks.
+
+4.Execute the PowerShell Script:
+
+-Run the Security_Log_Exporter.ps1 script.
+-After execution, a log file will be generated and stored at C:\ProgramData.
+
+5. Log File Management:
+
+-Copy the generated log file and create a new one.
+-Navigate to the Log Analytics workspace in Azure.
+-Upload the new log file to the workspace and designate it as a custom log.
+
 
 <h4>Project Credits</h4>
 Thank you Josh Madakor on YouTube for inspiring this project.
