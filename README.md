@@ -11,4 +11,4 @@ The script is used in this project where I setup Azure Sentinel (SIEM) and conne
 - PowerShell: Extract RDP failed logon logs from Windows Event Viewer
 
 <h2>API</h2>
-- https://ipgeolocation.io : IP Address to Geolocation API
+- IP Address to Geolocation API - https://ipgeolocation.io 
