@@ -113,7 +113,8 @@ FAILED_RDP_WITH_GEO_CL
          country = extract(@"country:([^,]+)", 1, RawData)
 | where destination != "samplehost"
 | where sourcehost != ""
-| summarize event_count=count() by latitude, longitude, sourcehost, label, destination, country```
+| summarize event_count=count() by latitude, longitude, sourcehost, label, destination, country
+```
 
 1. Visualization:
 - After executing the script, Azure Sentinel's workbook will process the data and plot it on a map.
