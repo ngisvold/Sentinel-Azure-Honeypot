@@ -89,5 +89,38 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 - Navigate to the Log Analytics workspace in Azure.
 - Upload the new log file to the workspace and designate it as a custom log.
 
+<h3>Extracting & Visualizing Attack Data:</h3>
+
+1. Data Extraction:
+
+- Once you've added the custom log to Azure, you'll now need to extract pertinent data like the location and IP.
+- To achieve this, navigate to the workbook in Azure Sentinel where you intend to visualize the map.
+
+2. Insert the Extraction Script:
+
+- Paste the following Kusto Query Language (KQL) script to extract and structure the desired data from the logs:
+
+FAILED_RDP_WITH_GEO_CL 
+| extend username = extract(@"username:([^,]+)", 1, RawData),
+         timestamp = extract(@"timestamp:([^,]+)", 1, RawData),
+         latitude = extract(@"latitude:([^,]+)", 1, RawData),
+         longitude = extract(@"longitude:([^,]+)", 1, RawData),
+         sourcehost = extract(@"sourcehost:([^,]+)", 1, RawData),
+         state = extract(@"state:([^,]+)", 1, RawData),
+         label = extract(@"label:([^,]+)", 1, RawData),
+         destination = extract(@"destinationhost:([^,]+)", 1, RawData),
+         country = extract(@"country:([^,]+)", 1, RawData)
+| where destination != "samplehost"
+| where sourcehost != ""
+| summarize event_count=count() by latitude, longitude, sourcehost, label, destination, country
+
+1. Visualization:
+- After executing the script, Azure Sentinel's workbook will process the data and plot it on a map.
+- You can now view and analyze the geographically pinpointed RDP attack attempts directly within Sentinel's visualization tools.
+
+<p align="center">
+<img src="https://nathangisvold.com/static/img/siem/AttackMap.png" height="80%" width="80%" alt="Firewall *"/>
+</p>
+
 <h4>Project Credits</h4>
 Thank you Josh Madakor on YouTube for inspiring this project.
