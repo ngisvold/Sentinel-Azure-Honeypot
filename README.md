@@ -28,7 +28,7 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 1. Establish a Log Analytics Workspace: Begin by creating a Log Analytics Workspace in Azure. This workspace will be crucial for ingesting logs using Sentinel.
 
 <p align="center">
-<img src="https://nathangisvold.com/static/img/siem/2_log-analyics.png" height="80%" width="80%" alt="Log Analytics Workspace"/>
+<img src="https://nathangisvold.com/static/img/siem/2_log-analytics.png" height="80%" width="80%" alt="Log Analytics Workspace"/>
 </p>
 
 2. Configure Microsoft Defender for Cloud:
