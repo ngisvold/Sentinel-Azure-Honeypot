@@ -18,7 +18,7 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 - Disabling the Windows VM Defender Firewall.
 
 <p align="center">
-<img src="https://nathangisvold.com/static/img/siem/firewall.webp" height="85%" width="85%" alt="Firewall *"/>
+<img src="https://nathangisvold.com/static/img/siem/firewall.jpg" height="80%" width="80%" alt="Firewall *"/>
 </p>
   
 *Warning: This atypical setup is intentionally designed to test the capabilities of Azure Sentinel SIEM and should not be replicated for production or sensitive environments.
