@@ -4,6 +4,17 @@
 
 Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, capturing live RDP Brute Force attack data from global sources. This project leverages a custom PowerShell script to fetch the geo-location of attackers and dynamically plots them on the Azure Sentinel Map for real-time threat visualization.
 
+<h3>Azure Sentinel Honeypot VM Setup Steps:</h3>
+
+1. Initialize VM: Begin by configuring the fundamental settings of the VM Windows 10/11 Image.
+
+2. Intentionally Vulnerable Configuration: In a deliberate deviation from best cybersecurity practices, configure the VM to be as exposed as possible for the purpose of this experiment. This involves:
+
+- Opening the network firewall to accept all incoming connections.
+- Disabling the Windows VM Defender Firewall.
+- 
+*Warning: This atypical setup is intentionally designed to test the capabilities of Azure Sentinel SIEM and should not be replicated for production or sensitive environments.
+
 <h2>Powershell for VM</h2>
 
 The Powershell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third party API to collect geographic information about the attackers location.
