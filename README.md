@@ -13,7 +13,9 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 - Opening the network firewall to accept all incoming connections.
 - Disabling the Windows VM Defender Firewall.
 
-<img src='https://www.dropbox.com/scl/fi/z8tm45pafo7qrdwvkvw5m/firewall.webp?rlkey=woxuf0pqibzs696fe779h7y38&dl=0'>
+<p align="center">
+<img src="https://www.dropbox.com/scl/fi/z8tm45pafo7qrdwvkvw5m/firewall.webp?rlkey=woxuf0pqibzs696fe779h7y38" height="85%" width="85%" alt="Firewall *"/>
+</p>
   
 *Warning: This atypical setup is intentionally designed to test the capabilities of Azure Sentinel SIEM and should not be replicated for production or sensitive environments.
 
