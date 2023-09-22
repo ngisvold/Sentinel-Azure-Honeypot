@@ -100,6 +100,7 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 
 - Paste the following Kusto Query Language (KQL) script to extract and structure the desired data from the logs:
 
+```        
 FAILED_RDP_WITH_GEO_CL 
 | extend username = extract(@"username:([^,]+)", 1, RawData),
          timestamp = extract(@"timestamp:([^,]+)", 1, RawData),
@@ -113,6 +114,7 @@ FAILED_RDP_WITH_GEO_CL
 | where destination != "samplehost"
 | where sourcehost != ""
 | summarize event_count=count() by latitude, longitude, sourcehost, label, destination, country
+        ```
 
 1. Visualization:
 - After executing the script, Azure Sentinel's workbook will process the data and plot it on a map.
