@@ -23,6 +23,24 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
   
 *Warning: This atypical setup is intentionally designed to test the capabilities of Azure Sentinel SIEM and should not be replicated for production or sensitive environments.
 
+<h3>Setting Up Log Analysis and Data Collection:</h3>
+
+1. Establish a Log Analytics Workspace: Begin by creating a Log Analytics Workspace in Azure. This workspace will be crucial for ingesting logs using Sentinel.
+
+<p align="center">
+<img src="https://nathangisvold.com/static/img/siem/2_log-analyics.png" height="80%" width="80%" alt="Log Analytics Workspace"/>
+</p>
+
+2. Configure Microsoft Defender for Cloud:
+
+- Navigate to Microsoft Defender for Cloud within Azure.
+- Access the Environment Settings and ensure that only the "Servers" option is enabled.
+- Proceed to the Data Collection section. Here, select "All Events" specific to the vulnerable VM we configured earlier.
+
+<p align="center">
+<img src="https://nathangisvold.com/static/img/siem/3_Data-Collection.png" height="80%" width="80%" alt="All Events"/>
+</p>
+
 <h2>Powershell for VM</h2>
 
 The Powershell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third party API to collect geographic information about the attackers location.
