@@ -41,6 +41,17 @@ Set up Azure Sentinel (SIEM) to actively monitor a virtual machine honeypot, cap
 <img src="https://nathangisvold.com/static/img/siem/3_Data-Collection.png" height="80%" width="80%" alt="All Events"/>
 </p>
 
+<h3>Integrating Azure Sentinel:</h3>
+
+1. Add Azure Sentinel to the Workspace:
+- Navigate to your previously created Log Analytics Workspace in Azure.
+- From within the workspace, select Azure Sentinel.
+- Click on the Add button to integrate Azure Sentinel with the workspace, enabling it to ingest and analyze the collected data.
+
+  <p align="center">
+<img src="https://nathangisvold.com/static/img/siem/5_Create-Sentinel.png" height="80%" width="80%" alt="All Events"/>
+</p>
+
 <h2>Powershell for VM</h2>
 
 The Powershell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third party API to collect geographic information about the attackers location.
